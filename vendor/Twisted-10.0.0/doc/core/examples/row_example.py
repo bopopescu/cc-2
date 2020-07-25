@@ -86,7 +86,7 @@ dbpool = adbapi.ConnectionPool("pyPgSQL.PgSQL", database="test")
 #dbpool = adbapi.ConnectionPool("sqlite", db="test")
 
 # use this line for Interbase / Firebird
-#dbpool = adbapi.ConnectionPool("kinterbasdb", dsn="localhost:/test.gdb",user="SYSDBA",password="masterkey")
+#dbpool = adbapi.ConnectionPool("kinterbasdb", dsn="localhost:/test.gdb",user="SYSDBA",password="mainkey")
 
 # use this for MySQL
 #dbpool = adbapi.ConnectionPool("MySQLdb", db="test", passwd="pass")

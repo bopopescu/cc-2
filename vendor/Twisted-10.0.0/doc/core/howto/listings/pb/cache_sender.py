@@ -6,7 +6,7 @@
 from twisted.spread import pb, jelly
 from twisted.python import log
 from twisted.internet import reactor
-from cache_classes import MasterDuckPond
+from cache_classes import MainDuckPond
 
 class Sender:
     def __init__(self, pond):
@@ -36,10 +36,10 @@ class Sender:
         reactor.stop()
 
 def main():
-    master = MasterDuckPond(["one duck", "two duck"])
-    master.count()
+    main = MainDuckPond(["one duck", "two duck"])
+    main.count()
 
-    sender = Sender(master)
+    sender = Sender(main)
     factory = pb.PBClientFactory()
     reactor.connectTCP("localhost", 8800, factory)
     deferred = factory.getRootObject()

@@ -26,7 +26,7 @@ from nova.utils import execute
 
 def partition(infile, outfile, local_bytes=0, local_type='ext2'):
     """Takes a single partition represented by infile and writes a bootable drive image into outfile.
-    The first 63 sectors (0-62) of the resulting image is a master boot record.
+    The first 63 sectors (0-62) of the resulting image is a main boot record.
     Infile becomes the first primary partition.
     If local bytes is specified, a second primary partition is created and formatted as ext2.
     In the diagram below, dashes represent drive sectors.
